@@ -56,29 +56,25 @@ Initializing provider plugins...
 #control versioning by project:
 brew install tfenv
 
-# add `terraform-version`:
+tfenv init
+
+tfenv install 1.7.5 && tfenv use 1.7.5
+
+# add `terraform-version`
 tfenv pin
-```
 
-```sh
-\$ ❯ brew install kreuzwerker/taps/m1-terraform-provider-helper
-```
+# provider helper
+brew install kreuzwerker/taps/m1-terraform-provider-helper
 
-run
+m1-terraform-provider-helper activate
 
-```sh
-$ ❯ m1-terraform-provider-helper activate
-
-/usr/local/bin
-$ ❯ m1-terraform-provider-helper install hashicorp/template -v v2.2.0
+m1-terraform-provider-helper install hashicorp/template -v v2.2.0
 ```
 
 reload shell
 
-then
-
 ```sh
-terraform init && terraform validate && terraform ftm
+exec $SHELL
 ```
 
 update `./main/tf` to include:
@@ -92,6 +88,14 @@ terraform {
     }
   }
 }
+```
+
+then run the following according to the provided doc:
+
+```sh
+terraform init && terraform validate && terraform fmt && terraform plan -out=tfplan
+
+terraform apply "tfplan"
 ```
 
 <!-- ## codespaces
