@@ -18,7 +18,14 @@
 ![alt text](image.png)
 
 - `webserver-Public-URL` and the `url` assigned from the end of the Terraform apply output.
-![alt text](image-1.png)
+![alt text](image-2.png)
+
+- The Cloud Computing Course webpage in your browser, including the address bar showing the `url`
+![alt text](image-3.png)
+
+- Provisioned Infrastructure as viewed through your AWS account, including the public IP of your webserver, under Instances.
+![alt text](image-5.png)
+![alt text](image-6.png)
 
 ## Note
 
