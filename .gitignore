@@ -35,3 +35,5 @@ terraform.rc
 
 #working notes
 /notes
+
+.DS_Store

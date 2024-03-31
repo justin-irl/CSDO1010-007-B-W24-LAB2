@@ -90,12 +90,14 @@ terraform {
 }
 ```
 
-then run the following according to the provided doc:
+then run the following according to the provided doc (with the addition to `terraform apply`):
 
 ```sh
 terraform init && terraform validate && terraform fmt && terraform plan -out=tfplan
 
 terraform apply "tfplan"
+### note
+# it takes about 30-60 seconds from the time the apply command is run to the time the resources are created and available at the provided endpoint
 ```
 
 <!-- ## codespaces
